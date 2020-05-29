@@ -24,11 +24,19 @@ Desenvolver uma API em PHP + Laravel que simule algumas funcionalidades de um ba
 3. Faça o pull da imagem postgres, baixe, crie e inicie o container: <br>
     ```docker run --name banco -e POSTGRES_PASSWORD=docker -e POSTGRES_DB=banco -p 5432:5432 -d postgres```
           
-4. Faça a migrate do banco: <br>
+4. Faça a migrate: <br>
     ```php artisan migrate```
 
-5. Faça o seed do banco: <br>
-    ```php artisan db:seed --class=ContaSeeder```
+5. Faça o seed: <br>
+    ```php artisan db:seed --class=ContaSeeder``` <br>
+   
+   Agora temos os seguintes dados na tabela **contas**: <br>
+   ```
+   ['conta' => 3535, 'saldo' => 523.22] 
+   ['conta' => 7201, 'saldo' => 10798.75] 
+   ['conta' => 2769, 'saldo' => 5720.89] 
+   ```
+    
 
 6. Suba o server (o servidor deve rodar no endereço http://127.0.0.1:8000): <br>
     ```php artisan serve```
