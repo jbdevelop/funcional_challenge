@@ -11,7 +11,7 @@ Desenvolver uma API em PHP + Laravel que simule algumas funcionalidades de um ba
 ## Requisitos
 - [PHP](https://www.php.net/downloads) 7.2 ou superior<br>
 - [Composer](https://getcomposer.org/download/)
-- [Xdebug (Para o PHPUnit coverage)](https://xdebug.org/docs/install)
+- [Xdebug](https://xdebug.org/docs/install) para o PHPUnit coverage
 
 ## Preparando o projeto para rodar
 
@@ -42,7 +42,7 @@ Desenvolver uma API em PHP + Laravel que simule algumas funcionalidades de um ba
 **Obter Saldo**
 
 http://127.0.0.1:8000/api/saldo <br>
-Requisição: 
+Requisição (GET): 
 ```
 {
   "conta": 3535
@@ -61,7 +61,7 @@ Resposta:
 **Sacar dinheiro**
 
 http://127.0.0.1:8000/api/sacar <br>
-Requisição:
+Requisição (PUT):
 ```
 {
   "conta": 7201,
@@ -82,7 +82,7 @@ Resposta:
 **Depositar dinheiro**
 
 http://127.0.0.1:8000/api/depositar <br>
-Requisição: 
+Requisição (PUT): 
 ```
 {
   "conta": 2769,
@@ -105,7 +105,7 @@ Resposta:
 **Saque > que saldo**
 
 http://127.0.0.1:8000/api/sacar <br>
-Requisição: 
+Requisição (PUT): 
 ```
 {
   "conta": 3535,
@@ -126,8 +126,8 @@ Resposta:
 
 **Saque <= 0 ou vazio**
 
-Requisição: <br>
-http://127.0.0.1:8000/api/sacar
+http://127.0.0.1:8000/api/sacar <br>
+Requisição: (PUT): 
 
 ```
 {
@@ -149,9 +149,8 @@ Resposta:
 
 **Depósito <= 0 ou vazio**
 
-Requisição: <br>
-http://127.0.0.1:8000/api/depositar
-
+http://127.0.0.1:8000/api/depositar <br>
+Requisição (PUT): 
 ```
 {
   "conta": 7201,
